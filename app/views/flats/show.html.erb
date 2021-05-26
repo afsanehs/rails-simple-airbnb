@@ -1,0 +1,28 @@
+<h1>Flat</h1>
+
+<p>
+  <strong>Name:</strong>
+  <%= @flat.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @flat.address %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @flat.description %>
+</p>
+
+<p>
+  <strong>price per night:</strong>
+  <%= @flat.price_per_night %>
+</p>
+
+<p>
+  <strong>number of guests:</strong>
+  <%= @flat.number_of_guests %>
+</p>
+
+<%= link_to "add new flat", new_flat_path(@flat) %>

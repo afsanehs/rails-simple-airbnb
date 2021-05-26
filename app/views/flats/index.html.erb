@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <% @flats.each do |flat| %>
+      <div class="col-sm-4 flat-card">
+        <h5><%= flat.name %></h5>
+        <p><%= flat.address %></p>
+        <p><i class="large material-icons">euro_symbol</i><%= flat.price_per_night %></p>
+        <p><i class="large material-icons">person</i><%= flat.number_of_guests %> </p>
+
+        <%= link_to flat.name, flat_path(flat.id) %>
+        <%= link_to "Delete #{flat.name}",
+                    flat_path(flat.id),
+                    method: :delete,
+                    data: { confirm: "Are you sure?" } %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+
